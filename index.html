@@ -24,25 +24,28 @@
 						<h3>CircuitBreaker, Contract, Security</h3>
 						<h4>Sleuth, Zookeeper, Vault, IaaS</h4>
 						<h5>……</h5>					
+						<img align="left" src="img/senla.png" height="30">
 					</section>
 
 					<section>
 						<img src="img/webinar_qr.png" width="400" title="Презентация, которую вы вот прям сейчас смотрите">
 					</section>
 
-					<!-- Slide 1 -->
 					<section style="text-align: left;">
-						- Ничего не знаю про эти ваши облака, у меня проект не в облаке
+						<h2>План</h2>
+						<p>1. Что это</p>
+						<p>2. Зачем это</p>
+						<p>3. Проблема <-> решение</p>
 					</section>
 
-					<!-- Slide 2 -->
 					<section style="text-align: left;">
-						- А Spring Cloud не только для облаков!
+						- Ничего не знаю про эти ваши облака, у меня проект не в облаке!<br>
+						<img src="img/why.png" width="250">
 					</section>
 
-					<!-- Slide 3 -->
-					<section>
-						<img src="img/cloud.png" width="500">
+					<section style="text-align: left;">
+						- А Spring Cloud не только для облаков!<br>
+						<img src="img/because.png" width="250"">
 					</section>
 
 					<section>
@@ -58,7 +61,7 @@
 					<section>
 						<img src="img/saas.png" width="1000">
 					</section>
-					<!-- Slide 4 -->
+
 					<section>
 						<table>
 						<tr>
@@ -73,6 +76,10 @@
 					</section>
 
 					<section>
+						<img src="img/components.png" width="1000">
+					</section>
+
+					<section>
 						<table>
 							<tr>
 								<td style="vertical-align: top;">
@@ -83,6 +90,7 @@
 								</td>
 							</tr>
 							</table>
+							<p style="text-align: left; font-size: smaller; font-style: italic;">Netfix Hystrix, Alibaba Sentinel, Spring Retry, Resilience4J</p>
 					</section>
 					<section>
 						<img src="img/circuit_breaker_scheme.png" width="600">
@@ -114,11 +122,18 @@
 							</table>
 					</section>
 
-					<section> 
-						Slide 2
+					<section>
+						<table>
+							<tr>
+								<td style="vertical-align: top;">
+									<h2>Vault</h2>
+								</td>
+								<td>
+									<img src="img/vault.png" width="300">
+								</td>
+							</tr>
+							</table>
 					</section>
-
-
 				</section>
 			</div>
 		</div>
@@ -138,6 +153,8 @@
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
 			});
+			
+			Reveal.configure({ pdfMaxPagesPerSlide: 1 })
 		</script>
 	</body>
 </html>

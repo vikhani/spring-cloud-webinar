@@ -20,10 +20,7 @@
 					<!-- Title -->
 					<section style="text-align: right;">
 						<h1>Spring Cloud</h1>
-						<h2>Gateway, Config, Netflix, OpenFeign,</h2>
-						<h3>CircuitBreaker, Contract, Security</h3>
-						<h4>Sleuth, Zookeeper, Vault, IaaS</h4>
-						<h5>……</h5>					
+						<h4>И что он в себе несет</h4>		
 						<img align="left" src="img/senla.png" height="30">
 					</section>
 
@@ -35,9 +32,14 @@
 
 					<section style="text-align: left;">
 						<h2>План</h2>
-						<p>1. Что это</p>
-						<p>2. Зачем это</p>
-						<p>3. Проблема <-> решение</p>
+						<p>1. Что это и зачем</p>
+						<p>2. Config</p>
+						<p>3. Discovery</p>
+						<p>4. Load Balancer</p>
+						<p>5. Gateway</p>
+						<p>6. Circuit Breaker</p>
+						<p>7. Vault</p>
+						<p>8. K8s Integration</p>
 					</section>
 
 					<section style="text-align: left;">
@@ -62,6 +64,21 @@
 
 					<section>
 						<img src="img/saas.png" width="1000">
+					</section>
+
+
+
+					<section>
+						<table>
+						<tr>
+							<td style="vertical-align: top;">
+								<h2><a href="https://netflix.github.io/">Netflix OSS</a></h2>
+							</td>
+							<td>
+								<img src="img/smoothie.png" width="500">
+							</td>
+						</tr>
+						</table>
 					</section>
 
 					<section>
@@ -122,19 +139,6 @@
 					</section>
 
 					<section>
-						<table>
-						<tr>
-							<td style="vertical-align: top;">
-								<h2><a href="https://netflix.github.io/">Netflix OSS</a></h2>
-							</td>
-							<td>
-								<img src="img/smoothie.png" width="500">
-							</td>
-						</tr>
-						</table>
-					</section>
-
-					<section>
 						<img src="img/components.png" width="1000">
 					</section>
 
@@ -150,12 +154,14 @@
 							</tr>
 							</table>
 					</section>
+
 					<section>
 						Start here:
 						<pre><code data-trim data-noescape style="font-size: 90%;" class="language-bash">
 					  $ git clone https://github.com/vikhani/spring-cloud-webinar-demo.git
 						</code></pre>
 					  </section>
+
 					<section>
 						Надежность туториалов наглядно:
 						<div class="r-stack">
@@ -167,25 +173,7 @@
 							<img class="fragment fade-in-then-out" src="img/cli6.jpg" height="600">
 						</div>
 					</section>
-					<section>
-						<table>
-							<tr>
-								<td style="vertical-align: top;">
-									<h2>Circuit Breaker</h2>
-								</td>
-								<td>
-									<img src="img/circuit_breaker.png" width="700">
-								</td>
-							</tr>
-							</table>
-							<p style="text-align: left; font-size: smaller; font-style: italic;">Netfix Hystrix, Alibaba Sentinel, Spring Retry, Resilience4J</p>
-					</section>
-					<section>
-						<img src="img/circuit_breaker_scheme.png" width="600">
-					</section>
-					<section>
-						<img src="img/hystrix.png" width="600">
-					</section>
+
 					<section>
 						<table>
 							<tr>
@@ -209,8 +197,53 @@
 									<img src="img/load_balancer.png" width="700">
 								</td>
 							</tr>
-							</table>
+						</table>
+						<p style="text-align: left; font-size: smaller; font-style: italic;">Netfix Ribbon, <a href="https://spring.io/blog/2020/03/25/spring-tips-spring-cloud-loadbalancer">Spring Cloud Loadbalancer (абстракция)</a></p>
 					</section>
+
+					<section>
+						Текущий результат:
+						<pre><code data-trim data-noescape style="font-size: 70%;" class="language-bash">
+					  $ git clone -b add_config_discovery https://github.com/vikhani/spring-cloud-webinar-demo.git
+						</code></pre>
+					</section>
+
+					<section>
+						<table>
+							<tr>
+								<td style="vertical-align: top;">
+									<h2>Gateway</h2>
+								</td>
+								<td>
+									<img src="img/gateway.jpg" width="300">
+								</td>
+							</tr>
+						</table>
+						<p style="text-align: left; font-size: smaller; font-style: italic;">Важно: основан на неблокирующем взаимодействии!</p>
+					</section>
+
+					<section>
+						<table>
+							<tr>
+								<td style="vertical-align: top;">
+									<h2>Circuit Breaker</h2>
+								</td>
+								<td>
+									<img src="img/circuit_breaker.png" width="700">
+								</td>
+							</tr>
+							</table>
+							<p style="text-align: left; font-size: smaller; font-style: italic;">Netfix Hystrix, Alibaba Sentinel, Spring Retry, Resilience4J</p>
+					</section>
+
+					<section>
+						<img src="img/circuit_breaker_scheme.png" width="600">
+					</section>
+
+					<section>
+						<img src="img/hystrix.png" width="600">
+					</section>
+
 
 					<section>
 						<table>
@@ -222,8 +255,21 @@
 									<img src="img/vault.png" width="300">
 								</td>
 							</tr>
-							</table>
+						</table>
+						<p style="text-align: left; font-size: smaller; font-style: italic;">Интегграция для HashiCorp’s Vault</p>
 					</section>
+
+					<section>
+						Dev запуск HashiCorp’s Vault:
+						- <a href="https://developer.hashicorp.com/vault/tutorials/getting-started/getting-started-install">Установка</a>
+						<pre><code data-trim data-noescape" class="language-bash">
+					 		$ export VAULT_ADDR=http://localhost:8200
+						</code></pre>
+						<pre><code data-trim data-noescape" class="language-bash" style="font-size: 57%;">
+							$ vault kv put secret/application spring.datasource.username=default-user spring.datasource.password=default-pass
+						</code></pre>
+					</section>
+
 				</section>
 			</div>
 		</div>

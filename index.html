@@ -20,7 +20,7 @@
 					<!-- Title -->
 					<section style="text-align: right;">
 						<h1>Spring Cloud</h1>
-						<h4>И что он в себе несет</h4>		
+						<h4>И что он в себе несёт</h4>		
 						<img align="left" src="img/senla.png" height="30">
 					</section>
 
@@ -244,6 +244,12 @@
 						<img src="img/hystrix.png" width="600">
 					</section>
 
+					<section>
+						Текущий результат:
+						<pre><code data-trim data-noescape style="font-size: 65%;" class="language-bash">
+					  $ git clone -b add_gateway_circuit_breaker https://github.com/vikhani/spring-cloud-webinar-demo.git
+						</code></pre>
+					</section>
 
 					<section>
 						<table>
@@ -256,17 +262,17 @@
 								</td>
 							</tr>
 						</table>
-						<p style="text-align: left; font-size: smaller; font-style: italic;">Интегграция для HashiCorp’s Vault</p>
+						<p style="text-align: left; font-size: smaller; font-style: italic;">Интеграция для HashiCorp’s Vault</p>
 					</section>
 
 					<section>
 						Dev запуск HashiCorp’s Vault:
-						- <a href="https://developer.hashicorp.com/vault/tutorials/getting-started/getting-started-install">Установка</a>
+						<p>- <a href="https://developer.hashicorp.com/vault/tutorials/getting-started/getting-started-install">Установка</a></p>
 						<pre><code data-trim data-noescape" class="language-bash">
 					 		$ export VAULT_ADDR=http://localhost:8200
 						</code></pre>
-						<pre><code data-trim data-noescape" class="language-bash" style="font-size: 57%;">
-							$ vault kv put secret/application spring.datasource.username=default-user spring.datasource.password=default-pass
+						<pre><code data-trim data-noescape" class="language-bash" style="font-size: 59%;">
+							$ vault kv put secret/application spring.datasource.username={user_name} spring.datasource.password={password}
 						</code></pre>
 					</section>
 

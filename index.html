@@ -2,13 +2,13 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
 		<title>Spring Cloud - Senla</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/moon.css">
+		<link rel="stylesheet" href="dist/theme/moon.css" id="theme">
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
@@ -136,6 +136,19 @@
 						</table>
 					</section>
 
+					<section data-auto-animate>
+						<h4>Historically, the release trains have names, not versions,</h4>
+					</section>
+					<section data-auto-animate>
+						<h4 style="color: gray;">Historically, the release trains have names, not versions,</h4>
+						<h4>to avoid confusion with the sub-projects.</h4>
+					</section>
+					<section data-auto-animate>
+						<h4 style="color: gray;">Historically, the release trains have names, not versions,</h4>
+						<h4 style="color: gray;">to avoid confusion with the sub-projects.</h4>
+						<h4>Starting in 2020, the Spring Team moved to Calendar Versioning...</h4>
+					</section>
+
 					<section>
 						<img src="img/release_train.png" width="700">
 					</section>
@@ -162,7 +175,7 @@
 						<pre><code data-trim data-noescape style="font-size: 90%;" class="language-bash">
 					  $ git clone https://github.com/vikhani/spring-cloud-webinar-demo.git
 						</code></pre>
-					  </section>
+					</section>
 
 					<section>
 						Надежность туториалов наглядно:
@@ -189,7 +202,19 @@
 							</table>
 					</section>
 
-					<section>
+					<section data-auto-animate>
+						<table>
+							<tr>
+								<td style="vertical-align: top;">
+									<h2>Load Balancer</h2>
+								</td>
+								<td>
+									<img src="img/load_balancer.png" width="700">
+								</td>
+							</tr>
+						</table>
+					</section>
+					<section data-auto-animate>
 						<table>
 							<tr>
 								<td style="vertical-align: top;">
@@ -224,7 +249,7 @@
 						<p style="text-align: left; font-size: smaller; font-style: italic;">Важно: основан на неблокирующем взаимодействии!</p>
 					</section>
 
-					<section>
+					<section data-auto-animate>
 						<table>
 							<tr>
 								<td style="vertical-align: top;">
@@ -235,15 +260,36 @@
 								</td>
 							</tr>
 							</table>
-							<p style="text-align: left; font-size: smaller; font-style: italic;">Netfix Hystrix, Alibaba Sentinel, Spring Retry, Resilience4J</p>
 					</section>
-
+					<section data-auto-animate>
+						<table>
+							<tr>
+								<td style="vertical-align: top;">
+									<h2>Circuit Breaker</h2>
+								</td>
+								<td>
+									<img src="img/circuit_breaker.png" width="700">
+								</td>
+							</tr>
+							</table>
+						<p style="text-align: left; font-size: smaller; font-style: italic;">Netflix Hystrix, Alibaba Sentinel, Spring Retry, Resilience4J</p>
+					</section>
+					<section data-auto-animate>
+						<table>
+							<tr>
+								<td style="vertical-align: top;">
+									<h2>Circuit Breaker</h2>
+								</td>
+								<td>
+									<img src="img/circuit_breaker.png" width="700">
+								</td>
+							</tr>
+							</table>
+						<p style="text-align: left; font-size: smaller; font-style: italic;">Netflix Hystrix, Alibaba Sentinel, Spring Retry, Resilience4J</p>
+						<img src="img/hystrix.png" width="600">
+					</section>
 					<section>
 						<img src="img/circuit_breaker_scheme.png" width="600">
-					</section>
-
-					<section>
-						<img src="img/hystrix.png" width="600">
 					</section>
 
 					<section>
@@ -267,9 +313,25 @@
 						<p style="text-align: left; font-size: smaller; font-style: italic;">Интеграция для HashiCorp’s Vault</p>
 					</section>
 
-					<section>
+					<section data-auto-animate>
 						Dev запуск HashiCorp’s Vault:
-						<p>- <a href="https://developer.hashicorp.com/vault/tutorials/getting-started/getting-started-install">Установка</a></p>
+
+					</section>
+					<section data-auto-animate>
+						Dev запуск HashiCorp’s Vault:
+						<p style="text-align: left; font-size: smaller;"><a href="https://developer.hashicorp.com/vault/tutorials/getting-started/getting-started-install">Установка HashiCorp’s Vault;</a></p>
+
+					</section>
+					<section data-auto-animate>
+						Dev запуск HashiCorp’s Vault:
+						<p style="text-align: left; font-size: smaller;"><a href="https://developer.hashicorp.com/vault/tutorials/getting-started/getting-started-install">Установка HashiCorp’s Vault;</a></p>
+						<pre><code data-trim data-noescape" class="language-bash">
+					 		$ export VAULT_ADDR=http://localhost:8200
+						</code></pre>
+					</section>
+					<section data-auto-animate>
+						Dev запуск HashiCorp’s Vault:
+						<p style="text-align: left; font-size: smaller;"><a href="https://developer.hashicorp.com/vault/tutorials/getting-started/getting-started-install"">⬇️ Установка HashiCorp’s Vault;</a></p>
 						<pre><code data-trim data-noescape" class="language-bash">
 					 		$ export VAULT_ADDR=http://localhost:8200
 						</code></pre>
@@ -298,14 +360,15 @@
 			// - https://revealjs.com/initialization/
 			// - https://revealjs.com/config/
 			Reveal.initialize({
-				view: 'reader',
+				view: 'scroll',
 				hash: true,
+				 scrollProgress: 'true',
 
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
 			});
 			
-			Reveal.configure({ pdfMaxPagesPerSlide: 1 })
+			// Reveal.configure({ pdfMaxPagesPerSlide: 1 })
 		</script>
 	</body>
 </html>

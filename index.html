@@ -31,7 +31,7 @@
 					</section>
 
 					<section style="text-align: left;">
-						<h2>План</h2>
+						<h4>План</h4>
 						<p>1. Что это и зачем</p>
 						<p>2. Config</p>
 						<p>3. Discovery</p>
@@ -39,6 +39,7 @@
 						<p>5. Gateway</p>
 						<p>6. Circuit Breaker</p>
 						<p>7. Vault</p>
+						<p>7. Bus</p>
 						<p>8. K8s Integration</p>
 					</section>
 
@@ -171,7 +172,7 @@
 					</section>
 
 					<section>
-						Start here:
+						<a href="https://github.com/vikhani/spring-cloud-webinar-demo">Start here</a>:
 						<pre><code data-trim data-noescape style="font-size: 90%;" class="language-bash">
 					  $ git clone https://github.com/vikhani/spring-cloud-webinar-demo.git
 						</code></pre>
@@ -180,12 +181,12 @@
 					<section>
 						Надежность туториалов наглядно:
 						<div class="r-stack">
-							<img class="fragment fade-in-then-out" src="img/cli1.jpg" height="250" style="border: 5px solid #555;">
-							<img class="fragment fade-in-then-out" src="img/cli2.jpg" height="450" style="border: 5px solid #555;">
-							<img class="fragment fade-in-then-out" src="img/cli3.png" height="150" style="border: 5px solid #555;">
-							<img class="fragment fade-in-then-out" src="img/cli4.jpg" height="300" style="border: 5px solid #555;">
-							<img class="fragment fade-in-then-out" src="img/cli5.jpg" height="280" style="border: 5px solid #555;">
-							<img class="fragment fade-in-then-out" src="img/cli6.jpg" height="600">
+							<img class="fragment fade-in-then-out" src="img/cli1.jpg" width="800" style="border: 5px solid #555;">
+							<img class="fragment fade-in-then-out" src="img/cli2.jpg" width="800" style="border: 5px solid #555;">
+							<img class="fragment fade-in-then-out" src="img/cli3.png" width="800" style="border: 5px solid #555;">
+							<img class="fragment fade-in-then-out" src="img/cli4.jpg" width="800" style="border: 5px solid #555;">
+							<img class="fragment fade-in-then-out" src="img/cli5.jpg" width="800" style="border: 5px solid #555;">
+							<img class="fragment fade-in-then-out" src="img/cli6.jpg" width="800">
 						</div>
 					</section>
 
@@ -229,7 +230,7 @@
 					</section>
 
 					<section>
-						Текущий результат:
+						<a href="https://github.com/vikhani/spring-cloud-webinar-demo/tree/add_config_discovery">Текущий результат</a>:
 						<pre><code data-trim data-noescape style="font-size: 70%;" class="language-bash">
 					  $ git clone -b add_config_discovery https://github.com/vikhani/spring-cloud-webinar-demo.git
 						</code></pre>
@@ -242,7 +243,7 @@
 									<h2>Gateway</h2>
 								</td>
 								<td>
-									<img src="img/gateway.jpg" width="300">
+									<img src="img/gateway.png" width="300">
 								</td>
 							</tr>
 						</table>
@@ -293,7 +294,7 @@
 					</section>
 
 					<section>
-						Текущий результат:
+						<a href="https://github.com/vikhani/spring-cloud-webinar-demo/tree/add_gateway_circuit_breaker">Результат</a>:
 						<pre><code data-trim data-noescape style="font-size: 65%;" class="language-bash">
 					  $ git clone -b add_gateway_circuit_breaker https://github.com/vikhani/spring-cloud-webinar-demo.git
 						</code></pre>
@@ -315,23 +316,16 @@
 
 					<section data-auto-animate>
 						Dev запуск HashiCorp’s Vault:
-
+						<p style="text-align: left; font-size: smaller;"><a href="https://developer.hashicorp.com/vault/tutorials/getting-started/getting-started-install">⬇️ Установка HashiCorp’s Vault;</a></p>
 					</section>
 					<section data-auto-animate>
 						Dev запуск HashiCorp’s Vault:
-						<p style="text-align: left; font-size: smaller;"><a href="https://developer.hashicorp.com/vault/tutorials/getting-started/getting-started-install">Установка HashiCorp’s Vault;</a></p>
-
-					</section>
-					<section data-auto-animate>
-						Dev запуск HashiCorp’s Vault:
-						<p style="text-align: left; font-size: smaller;"><a href="https://developer.hashicorp.com/vault/tutorials/getting-started/getting-started-install">Установка HashiCorp’s Vault;</a></p>
 						<pre><code data-trim data-noescape" class="language-bash">
 					 		$ export VAULT_ADDR=http://localhost:8200
 						</code></pre>
 					</section>
 					<section data-auto-animate>
 						Dev запуск HashiCorp’s Vault:
-						<p style="text-align: left; font-size: smaller;"><a href="https://developer.hashicorp.com/vault/tutorials/getting-started/getting-started-install"">⬇️ Установка HashiCorp’s Vault;</a></p>
 						<pre><code data-trim data-noescape" class="language-bash">
 					 		$ export VAULT_ADDR=http://localhost:8200
 						</code></pre>
@@ -341,12 +335,47 @@
 					</section>
 
 					<section>
-						Текущий результат:
+						<a href="https://github.com/vikhani/spring-cloud-webinar-demo/tree/add_vault">Результат</a>:
 						<pre><code data-trim data-noescape style="font-size: 80%;" class="language-bash">
 					  $ git clone -b add_vault https://github.com/vikhani/spring-cloud-webinar-demo.git
 						</code></pre>
 					</section>
 
+
+					<section>
+						<table>
+							<tr>
+								<td style="vertical-align: top;">
+									<h2>Bus</h2>
+								</td>
+								<td>
+									<img src="img/bus.png" width="600">
+								</td>
+							</tr>
+						</table>
+					</section>
+					<section data-auto-animate>
+						Dev запуск RabbitMQ:
+						<pre><code data-trim data-noescape" class="language-bash">
+					 		$ docker pull rabbitmq:3-management
+						</code></pre>
+					</section>
+					<section data-auto-animate>
+						Dev запуск RabbitMQ:
+						<pre><code data-trim data-noescape" class="language-bash">
+					 		$ docker pull rabbitmq:3-management
+						</code></pre>
+						<pre><code data-trim data-noescape" data-noescape style="font-size: 60%;"class="language-bash">
+							$ docker run -d --hostname my-rabbit --name some-rabbit -p 15672:15672 -p 5672:5672 rabbitmq:3-management
+					   </code></pre>
+					</section>
+
+					<section>
+						<a href="https://github.com/vikhani/spring-cloud-webinar-demo/tree/add_bus">Результат</a>:
+						<pre><code data-trim data-noescape style="font-size: 80%;" class="language-bash">
+					  $ git clone -b add_bus https://github.com/vikhani/spring-cloud-webinar-demo.git
+						</code></pre>
+					</section>
 				</section>
 			</div>
 		</div>
@@ -362,7 +391,7 @@
 			Reveal.initialize({
 				view: 'scroll',
 				hash: true,
-				 scrollProgress: 'true',
+				mouseWheel: 'true',
 
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]

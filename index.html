@@ -63,8 +63,38 @@
 					</section>
 
 					<section>
+						<div style="text-align: left; font-style: italic;"><b>Суть принципов:</b></div>
+						<li style="text-align: left;"><b>Декларативный формат</b> установки и настройки</li>
+						<li style="text-align: left;">Максимальная <b>переносимость</b> между средами выполнения</li>
+						<li style="text-align: left;">Готовность к развёртыванию на <b>облачных платформах</b></li>
+						<li style="text-align: left;"><b>Continuous deployment</b></li>
+						<li style="text-align: left;">Готовность к <b>масштабированию</b></li>
+					</section>
+
+					<section>
 						<h2>IaaS-PaaS-SaaS</h2>
 						<img src="img/saas.png" width="1000">
+					</section>
+
+					<section>
+						<table>
+							<tr> 
+								<td><b>Тип платформы</b></td> 
+								<td><b>Примеры</b></td>
+							 </tr>
+							  <tr>
+								 <td><b>SaaS</b></td> 
+								 <td>Netflix, Google Workspace, Dropbox, Salesforce, Cisco WebEx, Concur, GoToMeeting</td>
+							 </tr>
+							 <tr> 
+								<td><b>PaaS</b></td>
+								<td>AWS Elastic Beanstalk, Windows Azure, Heroku, Force.com, Google App Engine, Apache Stratos, OpenShift</td> 
+							</tr>
+							<tr> 
+								<td><b>IaaS</b></td>
+								<td>DigitalOcean, Linode, Rackspace, Amazon Web Services (AWS), Cisco Metapod, Microsoft Azure, Google Compute Engine (GCE)</td> 
+							</tr>
+						 </table>
 					</section>
 
 					<section>
@@ -226,7 +256,7 @@
 								</td>
 							</tr>
 						</table>
-						<p style="text-align: left; font-size: smaller; font-style: italic;">Netfix Ribbon, <a href="https://spring.io/blog/2020/03/25/spring-tips-spring-cloud-loadbalancer">Spring Cloud Loadbalancer (абстракция)</a></p>
+						<p style="text-align: left; font-size: smaller; font-style: italic;">Netfix Ribbon, <a href="https://spring.io/blog/2020/03/25/spring-tips-spring-cloud-loadbalancer">Spring Cloud Loadbalancer</a></p>
 					</section>
 
 					<section data-auto-animate>
@@ -235,8 +265,8 @@
 
 					<section>
 						<a href="https://github.com/vikhani/spring-cloud-webinar-demo/tree/add_config_discovery">Текущий результат</a>:
-						<pre><code data-trim data-noescape style="font-size: 70%;" class="language-bash">
-					  $ git clone -b add_config_discovery https://github.com/vikhani/spring-cloud-webinar-demo.git
+						<pre><code data-trim data-noescape style="font-size: 74%;" class="language-bash">
+					  $ git clone -b 2_discovery https://github.com/vikhani/spring-cloud-webinar-demo.git
 						</code></pre>
 					</section>
 
@@ -304,7 +334,7 @@
 					<section>
 						<a href="https://github.com/vikhani/spring-cloud-webinar-demo/tree/add_gateway_circuit_breaker">Результат</a>:
 						<pre><code data-trim data-noescape style="font-size: 65%;" class="language-bash">
-					  $ git clone -b add_gateway_circuit_breaker https://github.com/vikhani/spring-cloud-webinar-demo.git
+					  $ git clone -b 5_circuit_breaker https://github.com/vikhani/spring-cloud-webinar-demo.git
 						</code></pre>
 					</section>
 
@@ -328,14 +358,14 @@
 					</section>
 					<section data-auto-animate>
 						Dev запуск HashiCorp’s Vault:
-						<pre><code data-trim data-noescape" class="language-bash" style="font-size: 84%;">
-							vault server --dev --dev-root-token-id="00000000-0000-0000-0000-000000000000"
+						<pre><code data-trim data-noescape" class="language-bash" style="font-size: 82%;">
+							$ vault server --dev --dev-root-token-id="00000000-0000-0000-0000-000000000000"
 						</code></pre>
 					</section>
 					<section data-auto-animate>
 						Dev запуск HashiCorp’s Vault:
-						<pre><code data-trim data-noescape" class="language-bash" style="font-size: 84%;">
-							vault server --dev --dev-root-token-id="00000000-0000-0000-0000-000000000000"
+						<pre><code data-trim data-noescape" class="language-bash" style="font-size: 82%;">
+							$ vault server --dev --dev-root-token-id="00000000-0000-0000-0000-000000000000"
 						</code></pre>
 						<pre><code data-trim data-noescape" class="language-bash">
 					 		$ export VAULT_ADDR=http://localhost:8200
@@ -343,8 +373,8 @@
 					</section>
 					<section data-auto-animate>
 						Dev запуск HashiCorp’s Vault:
-						<pre><code data-trim data-noescape" class="language-bash" style="font-size: 84%;">
-							vault server --dev --dev-root-token-id="00000000-0000-0000-0000-000000000000"
+						<pre><code data-trim data-noescape" class="language-bash" style="font-size: 82%;">
+							$ vault server --dev --dev-root-token-id="00000000-0000-0000-0000-000000000000"
 						</code></pre>
 						<pre><code data-trim data-noescape" class="language-bash">
 					 		$ export VAULT_ADDR=http://localhost:8200
@@ -357,7 +387,7 @@
 					<section>
 						<a href="https://github.com/vikhani/spring-cloud-webinar-demo/tree/add_vault">Результат</a>:
 						<pre><code data-trim data-noescape style="font-size: 80%;" class="language-bash">
-					  $ git clone -b add_vault https://github.com/vikhani/spring-cloud-webinar-demo.git
+					  $ git clone -b 6_vault https://github.com/vikhani/spring-cloud-webinar-demo.git
 						</code></pre>
 					</section>
 
@@ -393,7 +423,7 @@
 					<section>
 						<a href="https://github.com/vikhani/spring-cloud-webinar-demo/tree/add_bus">Результат</a>:
 						<pre><code data-trim data-noescape style="font-size: 80%;" class="language-bash">
-					  $ git clone -b add_bus https://github.com/vikhani/spring-cloud-webinar-demo.git
+					  $ git clone -b 7_bus https://github.com/vikhani/spring-cloud-webinar-demo.git
 						</code></pre>
 					</section>
 
@@ -482,7 +512,7 @@
 					<section>
 						<a href="https://github.com/vikhani/spring-cloud-webinar-demo/tree/move_to_k8s">Результат</a>:
 						<pre><code data-trim data-noescape style="font-size: 78%;" class="language-bash">
-					  $ git clone -b move_to_k8s https://github.com/vikhani/spring-cloud-webinar-demo.git
+					  $ git clone -b 8_k8s https://github.com/vikhani/spring-cloud-webinar-demo.git
 						</code></pre>
 					</section>
 					<section data-auto-animate>
